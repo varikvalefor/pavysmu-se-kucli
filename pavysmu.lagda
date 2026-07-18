@@ -281,7 +281,7 @@ PavysmuSetcidu b s = (Σ
                        Smuni
                        (λ sm → (p : Prenu)
                              → Selbau p b
-                             → (Pavysmu b s sm p)))
+                             → Pavysmu b s sm p))
 \end{code}
 
 \subsection{lo se ctaipe co su'u pavysmu bangu / The Types regarding Semantically Unambiguous Languages}
