@@ -259,8 +259,7 @@ IsSmuni = {!!}
 record Pavysmu (b : Bangu)
                (st : Setcidu b)
                (sm : Smuni)
-               (p : Prenu)
-               (sv : Smuvanbi) : Set
+               (p : Prenu) : Set
                where
   field
     is : IsSmuni b sm st p (banguSmuvanbi b)
@@ -277,7 +276,7 @@ PavysmuSetcidu b s = (Σ
                        Smuni
                        (λ sm → (p : Prenu)
                              → Selbau p b
-                             → (Pavysmu b s sm p $ banguSmuvanbi b)))
+                             → (Pavysmu b s sm p)))
 \end{code}
 
 \subsection{lo se ctaipe co su'u pavysmu bangu / The Types regarding Semantically Unambiguous Languages}
@@ -337,7 +336,7 @@ pretiPe'a : {b : Bangu}
               Smuni
               (λ sm →
                 (_×_
-                  (Pavysmu b s sm p $ banguSmuvanbi b)
+                  (Pavysmu b s sm p)
                   (Setesejimpe p s × Slabu sm p))))
 pretiPe'a {b} Pb s p S = sm , (Ps , jimpe , slabu)
   where
