@@ -206,6 +206,8 @@ IsSmuni : (b : Bangu) → Smuni → Setcidu b → Prenu → Smuvanbi → Set
 IsSmuni = {!!}
 \end{code}
 
+\section{le se sruma pe'a / ``Assumptions''}
+
 \subsection{le ctaipe be tu'a lo su'u te smuni naja cu jimpe / The Proof regarding a Relationship between Meaning and Understanding}
 
 \begin{code}
