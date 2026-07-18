@@ -266,7 +266,7 @@ pretiPe'a {b} {s} Pb p₁ p₂ S₁ S₂ C =
   Ps₂ = ≡.subst (λ sm → Pavysmu b s sm p₂ $ banguSmuvanbi b)
                  (Pavysmu.nis
                    (Σ.proj₂ $ Pb s p₂ S₂)
-                   {!!}
+                   (Σ.proj₁ $ Pb s p₁ S₁)
                    {!!})
                  (Σ.proj₂ $ Pb s p₂ S₂)
 \end{code}
