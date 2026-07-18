@@ -304,6 +304,13 @@ PavysmuBangu b = (s : Setcidu b) → PavysmuSetcidu b s
 \section{le se sruma pe'a / ``Assumptions''}
 
 \subsection{le ctaipe be tu'a lo su'u te smuni naja cu jimpe / The Proof regarding a Relationship between Meaning and Understanding}
+\paragraph{la .lojban.}
+ni'o sa'u la'o zoi.\ \F{Smuni→Jimpe}\ .zoi.\ ctaipe ko'a goi le su'u ro da poi ke'a prenu zo'u ro de poi ke'a te gerna zo'u da te smuni de naja cu jimpe fi de\sds  .i la .varik.\ na birti lo du'u xu kau vo'a krici tu'a ko'a\sds  .i ku'i la .varik.\ na tolkri tu'a ko'a ca lo nu vo'a cusku dei \\
+.i la .varik.\ cu kucli je cu djica curmi tu'a lo pinka
+
+\paragraph{English}
+Basically, \F{Smuni→Jimpe} is a proof of that (for all prenu $p$, for all utterances $b$, $b$ is semantically-meaningful to $p$ only-if $b$ is understood by $p$).  VARIK is not certain about whether VARIK believes the term/idea.  That (VARIK disbelieves the idea) is not contemporaneous with writing the current sentence.  \\
+VARIK is curious and welcomes comments.
 
 \begin{code}
 Smuni→Jimpe : (b : Bangu)
@@ -316,6 +323,13 @@ Smuni→Jimpe = {!!}
 \end{code}
 
 \subsection{le ctaipe be tu'a lo su'u jimpe fi lo se smuni naja le smuni / The Proof of that (the Signifier is Understood Only-If the Signified is Understood)}
+\paragraph{la .lojban.}
+ni'o sa'u la'o zoi.\ \F{*Jimpe→Jimpe}\ .zoi.\ ctaipe ko'a goi le su'u ro da poi ke'a prenu zo'u ro de poi ke'a te gerna zo'u da jimpe fi de naja cu jimpe fi lo smuni be de\sds  .i la .varik.\ na birti lo du'u xu kau vo'a krici tu'a ko'a\sds  .i ku'i la .varik.\ na tolkri tu'a ko'a ca lo nu vo'a cusku dei \\
+.i la .varik.\ cu kucli je cu djica curmi tu'a lo pinka
+
+\paragraph{English}
+Basically, \F{*Jimpe→Jimpe} is a proof of that (for all prenu $p$, for all utterances $b$, $b$ is understood by $p$ only-if the meaning of $b$ is understood by $p$).  VARIK is not certain about whether VARIK believes the term/idea.  That (VARIK disbelieves the idea) is not contemporaneous with writing the current sentence.  \\
+VARIK is curious and welcomes comments.
 
 \begin{code}
 *Jimpe→Jimpe : (b : Bangu)
@@ -329,6 +343,13 @@ Smuni→Jimpe = {!!}
 \end{code}
 
 \subsection{le ctaipe be le su'u setese jimpe naja cu se slabu / The Proof of that (Understanding implies Being Familiar)}
+\paragraph{la .lojban.}
+ni'o sa'u la'o zoi.\ \F{Jimpe→Slabu}\ .zoi.\ ctaipe ko'a goi le su'u ro da poi ke'a prenu zo'u ro de poi ke'a te gerna zo'u da jimpe fi de naja cu se slabu de\sds  .i la .varik.\ na birti lo du'u xu kau vo'a krici tu'a ko'a\sds  .i ku'i la .varik.\ na tolkri tu'a ko'a ca lo nu vo'a cusku dei \\
+.i la .varik.\ cu kucli je cu djica curmi tu'a lo pinka
+
+\paragraph{English}
+Basically, \F{Smuni→Jimpe} is a proof of that (for all prenu $p$, for all utterances $b$, $b$ is understood by $p$ only-if $b$ is familiar to $p$).  VARIK is not certain about whether VARIK believes the term/idea.  That (VARIK disbelieves the idea) is not contemporaneous with writing the current sentence.  \\
+VARIK is curious and welcomes comments.
 
 \begin{code}
 Jimpe→Slabu : ∀ {a} → {A : Set a}
