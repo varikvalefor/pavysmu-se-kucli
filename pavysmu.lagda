@@ -230,7 +230,7 @@ PavysmuSetcidu b s = (p : Prenu)
                    → (Σ
                        Smuni
                        (λ sm →
-                         (Pavysmu b sm s p $ banguSmuvanbi b)))
+                         (Pavysmu b s sm p $ banguSmuvanbi b)))
 \end{code}
 
 \subsection{lo se ctaipe co su'u pavysmu bangu / The Types regarding Semantically Unambiguous Languages}
