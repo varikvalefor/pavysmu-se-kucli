@@ -107,6 +107,7 @@ open import Function
 open import Data.Product
   using (
     _×_;
+    _,_;
     Σ
   )
 open import Relation.Nullary
@@ -258,6 +259,7 @@ pretiPe'a : {b : Bangu}
                     Ps p₁ × Ps p₂)
                   (let F = λ p → Setesejimpe p s × Slabu sm p in
                    F p₁ × F p₂))))
-pretiPe'a = {!!}
+pretiPe'a {b} {s} Pb p₁ p₂ S₁ S₂ C =
+  {!!} , {!!}
 \end{code}
 \end{document}
