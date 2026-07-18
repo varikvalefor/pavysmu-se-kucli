@@ -206,6 +206,18 @@ IsSmuni : (b : Bangu) → Smuni → Setcidu b → Prenu → Smuvanbi → Set
 IsSmuni = {!!}
 \end{code}
 
+\subsection{le ctaipe be tu'a lo su'u te smuni naja cu jimpe / The Proof regarding a Relationship between Meaning and Understanding}
+
+\begin{code}
+Smuni→Jimpe : (b : Bangu)
+            → (sm : Smuni)
+            → (g : Setcidu b)
+            → (p : Prenu)
+            → IsSmuni b sm g p $ banguSmuvanbi b
+            → Setesejimpe p g
+Smuni→Jimpe = {!!}
+\end{code}
+
 \subsection{lo se ctaipe co su'u prenu pavysmu / The Types regarding Being (Personally Semantically-Unambiguous)}
 
 \begin{code}
