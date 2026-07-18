@@ -138,11 +138,23 @@ Prenu = {!!}
 \end{code}
 
 \subsection{le se ctaipe be zo'e ja lo smuni / The Type of Meanings or Whatever}
+\paragraph{la .lojban.}
+ni'o la'oi .\F{Smuni}.\ se ctaipe lo smuni\ldots ku ja lo co'e ja sinxa be ri\sds  .i la .varik.\ na birti lo du'u xu kau cmaci co'e fa lo smuni
+
+\paragraph{English}
+\F{Smuni} is the type of meanings\ldots or representations/whatever of meanings.  VARIK is not certain about whether meanings are mathematical objects.
 
 \begin{code}
 Smuni : Set
 Smuni = {!!}
 \end{code}
+
+\subsection{le se ctaipe be zo'e ja lo smuvanbi / The Type of Meaning Contexts or Whatever}
+\paragraph{la .lojban.}
+ni'o la'oi .\F{Smuni}.\ se ctaipe lo smuvanbi\ldots ku ja lo co'e ja sinxa be ri\sds  .i la .varik.\ na birti lo du'u xu kau cmaci co'e fa lo smuvanbi
+
+\paragraph{English}
+\F{Smuni} is the type of contexts (for meanings)\ldots or representations/whatever of contexts for meanings.  VARIK is not certain about whether meaning contexts are mathematical objects.
 
 \begin{code}
 Smuvanbi : Set
@@ -150,6 +162,11 @@ Smuvanbi = {!!}
 \end{code}
 
 \subsection{le su'u jimpe kei se ctaipe / The Type regarding Understanding}
+\paragraph{la .lojban.}
+ni'o ga jo ctaipe la'e zoi zoi.\ \F{Setesejimpe} \B p \B x\ .zoi.\ gi lo me'oi .\B p.\ prenu cu jimpe fi la'e zoi.\ \B x\ .zoi.
+
+\paragraph{English}
+A term of \F{Setesejimpe} \B p \B x exists iff \B x is understood by the \B p prenu.
 
 \begin{code}
 Setesejimpe : ∀ {a} → {A : Set a} → Prenu → A → Set a
@@ -157,6 +174,11 @@ Setesejimpe = {!!}
 \end{code}
 
 \subsection{le su'u slabu kei se ctaipe / The Type regarding Being Familiar}
+\paragraph{la .lojban.}
+ni'o ga jo ctaipe la'e zoi zoi.\ \F{Slabu} \B x \B p\ .zoi.\ gi lo me'oi .\B p.\ prenu cu se slabu la'e zoi.\ \B x\ .zoi.
+
+\paragraph{English}
+A term of \F{Slabu} \B p \B x exists iff \B x is familiar to the \B p prenu.
 
 \begin{code}
 Slabu : ∀ {a} → {A : Set a} → A → Prenu → Set a
@@ -165,6 +187,11 @@ Slabu = {!!}
 
 \section{le srana be lo bangu / Language Stuff}
 \subsection{le se ctaipe be lo bangu / The Type of Languages}
+\paragraph{la .lojban.}
+ni'o lo ro co'e cu bangu jo cu ctaipe la'oi .\F{Bangu}.
+
+\paragraph{English}
+For all $x$, $x$ is a term of \F{Bangu} iff $x$ is a language.
 
 \begin{code}
 Bangu : Set
@@ -172,6 +199,11 @@ Bangu = {!!}
 \end{code}
 
 \subsection{le su'u selbau kei se ctaipe / The Type regarding Using a Language}
+\paragraph{la .lojban.}
+ni'o ga jo ctaipe la'e zoi zoi.\ \F{Selbau} \B p \B x\ .zoi.\ gi la'e zo'oi .\B x.\ bangu lo me'oi .\B p.\ prenu
+
+\paragraph{English}
+A term of \F{Selbau} \B p \B x exists iff \B x is a language of the prenu which is represented by \B p.
 
 \begin{code}
 Selbau : Prenu → Bangu → Set
