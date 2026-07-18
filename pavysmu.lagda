@@ -260,7 +260,7 @@ IsSmuni = {!!}
 ni'o ga jo ctaipe la'e zoi zoi.\ \AgdaRecord{Pavysmu} \B b \B g \B s \B p\ .zoi.\ gi la'e zo'oi .\B s.\ du lo ro smuni be zo'e ja la'e zo'oi .\B g.\ bei lo me'oi .\B p.\ prenu bei va'o tu'a la'e zo'oi .\B b.
 
 \paragraph{English}
-If-and-only-if a term of \AgdaRecord{Pavysmu} \B b \B g \B s \B p exists, then \B s is all meanings meaning (to \B p and under the context of \B b) of \B g.
+If-and-only-if a term of \AgdaRecord{Pavysmu} \B b \B g \B s \B p exists, then \B s is all meanings (to \B p and under the context of \B b) of \B g.
 
 \begin{code}
 record Pavysmu (b : Bangu)
