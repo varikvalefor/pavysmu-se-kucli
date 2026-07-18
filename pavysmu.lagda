@@ -239,7 +239,7 @@ ni'o ga jo ctaipe la'e zoi zoi.\ \F{Cusku} \B p \B s\ .zoi.\ gi lo me'oi .\B p.\
 A term of \F{Cusku} \B p \B s exists iff \B s is communicated by the \B p prenu.
 
 \begin{code}
-Cusku : {b : Bangu} → (p : Prenu) → Setcidu b → Set
+Cusku : {b : Bangu} → Prenu → Setcidu b → Set
 Cusku = {!!}
 \end{code}
 
