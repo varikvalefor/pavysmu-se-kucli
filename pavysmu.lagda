@@ -90,6 +90,13 @@
 \begin{document}
 \maketitle
 
+\begin{abstract}
+  \noindent
+  ni'o la .varik.\ cu retsku pe'a bau la'oi .Agda. fe lo se du'u xu kau ro da poi ke'a prenu zo'u ro de poi ke'a prenu zo'u ga naja pavysmu bangu da je de gi da ce de banzuka ko'a xi no goi lo ka ce'u simxa lo ka ce'u xi re xi pa smimlu ce'u xi re xi re tu'a lo sidbo ge'u lo ka da na cusku lo cnino be de\sds  .i la .varik.\ na troci ja djica lo nu vo'a bitygau lo su'o prenu jenai ke du be ri
+
+  VARIK ``asks'' (via Agda) about whether for all prenu $p_1$, for all prenu $p_2$, if $p_1$ and $p_2$ use a language which is semantically unambiguous and precise, then $p_1$ and $p_2$ are sufficient (for that $p_1$ does not state stuff which is new/unfamiliar to $p_2$) in resembling.  VARIK does not attempt or desire that VARIK convinces some prenu which is not VARIK.
+\end{abstract}
+
 \section{le vrici / Miscellaneous}
 
 \begin{code}
