@@ -266,9 +266,10 @@ pretiPe'a : {b : Bangu}
                 (_×_
                   (Pavysmu b s sm p $ banguSmuvanbi b)
                   (Setesejimpe p s × Slabu sm p))))
-pretiPe'a {b} Pb s p S = sm , (Ps , {!!} , {!!})
+pretiPe'a {b} Pb s p S = sm , (Ps , jimpe , {!!})
   where
   sm = Σ.proj₁ $ Pb s
   Ps = Σ.proj₂ (Pb s) p S
+  jimpe = Smuni→Jimpe b sm s p $ Pavysmu.is Ps
 \end{code}
 \end{document}
