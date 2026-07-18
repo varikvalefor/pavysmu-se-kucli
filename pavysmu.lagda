@@ -3,6 +3,10 @@ open import Function
   using (
     _$_
   )
+pen import Data.Product
+  using (
+    Σ
+  )
 open import Relation.Nullary
   using (
     ¬_
@@ -52,18 +56,8 @@ record Pavysmu (b : Bangu)
         → ¬_ $ sm ≡ sm'
         → ¬_ $ IsSmuni b sm' st p $ banguSmuvanbi b
 
-record PavysmuSetcidu (b : Bangu) (s : Setcidu b) : Set
-  where
-  field
-    sm₀ : Smuni
-    is : (p : Prenu)
-       → Selbau p b
-       → IsSmuni b sm₀ s p (banguSmuvanbi b)
-    nis : (sm₁ : Smuni)
-        → (p : Prenu)
-        → Selbau p b
-        → ¬ (sm₁ ≡ sm₀)
-        → ¬ IsSmuni b sm₁ s p (banguSmuvanbi b)
+PavysmuSetcidu : (b : Bangu) → (s : Setcidu b) → Set
+PavysmuSetcidu b s = (p : Prenu) → Selbau p b → Σ Smuni $ λ sm → Pavysmu b sm s p $ banguSmuvanbi b
 
 PavysmuBangu : Bangu → Set
 PavysmuBangu b = (s : Setcidu b) → PavysmuSetcidu b s
