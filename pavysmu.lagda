@@ -5,6 +5,7 @@ open import Function
   )
 open import Data.Product
   using (
+    _×_;
     Σ
   )
 open import Relation.Nullary
@@ -45,8 +46,8 @@ IsSmuni : (b : Bangu) → Smuni → Setcidu b → Prenu → Smuvanbi → Set
 IsSmuni = {!!}
 
 record Pavysmu (b : Bangu)
-               (sm : Smuni)
                (st : Setcidu b)
+               (sm : Smuni)
                (p : Prenu)
                (sv : Smuvanbi) : Set
                where
@@ -73,13 +74,18 @@ Setesejimpe = {!!}
 Slabu : ∀ {a} → {A : Set a} → A → Prenu → Set a
 Slabu = {!!}
 
--- pretiPe'a : {b : Bangu}
---           → {s : Setcidu b}
---           → PavysmuBangu b
---           → (p₁ p₂ : Prenu)
---           → Cusku p₁ s
---           → (_×_
---               (Σ
---                 Smuni
---                 (IsSmuni 
+pretiPe'a : {b : Bangu}
+          → {s : Setcidu b}
+          → PavysmuBangu b
+          → (p₁ p₂ : Prenu)
+          → Cusku {b} p₁ s
+          → (Σ
+              Smuni
+              (λ sm →
+                (_×_
+                  (let Ps = λ p → Pavysmu b s sm p $ banguSmuvanbi b in
+                    Ps p₁ × Ps p₂)
+                  (let F = λ p → Setesejimpe p s × Slabu sm p in
+                   F p₁ × F p₂))))
+pretiPe'a = {!!}
 \end{code}
