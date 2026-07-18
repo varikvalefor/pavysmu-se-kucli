@@ -218,6 +218,11 @@ banguSmuvanbi = {!!}
 \end{code}
 
 \subsection{lo se ctaipe be lo te gerna / The Types of Grammatical/Linguistic Utterances}
+\paragraph{la .lojban.}
+ni'o lo ro co'e cu te gerna la'e zo'oi .\B b.\ jo cu ctaipe ja ke se pagbu be lo ctaipe ke'e be la'e zoi zoi.\ \F{Selbau} \B b\ .zoi.
+
+\paragraph{English}
+\F{Selbau} \B b is the type of things which are grammatical with regard to \B b, or a term of \F{Selbau} \B b ``contains'' an utterance of \B b.  A term of \B b is/represents an utterance of the \B b language.
 
 \begin{code}
 Setcidu : Bangu → Set
@@ -225,6 +230,11 @@ Setcidu = {!!}
 \end{code}
 
 \subsection{le su'u cusku kei se ctaipe be lo te gerna / The Types regarding Saying/Communicating Things}
+\paragraph{la .lojban.}
+ni'o ga jo ctaipe la'e zoi zoi.\ \F{Cusku} \B p \B s\ .zoi.\ gi lo me'oi .\B p.\ prenu cu cusku la'e zo'oi .\B s.
+
+\paragraph{English}
+A term of \F{Cusku} \B p \B s exists iff \B s is communicated by the \B p prenu.
 
 \begin{code}
 Cusku : {b : Bangu} → (p : Prenu) → Setcidu b → Set
@@ -232,6 +242,11 @@ Cusku = {!!}
 \end{code}
 
 \subsection{le su'u smuni kei se ctaipe be lo te gerna / The Types regarding Being Meaningful}
+\paragraph{la .lojban.}
+ni'o ga jo ctaipe la'e zoi zoi.\ \F{IsSmuni} \B b \B s \B g \B p \B v\ .zoi.\ gi la'e zo'oi .\B s.\ smuni la'e zo'oi .\B g.\ lo me'oi .\B p.\ prenu va'o tu'a la'e zo'oi .\B v.
+
+\paragraph{English}
+If-and-only-if a term of \F{IsSmuni} \B b \B s \B g \B p \B v exists, then \B s is the meaning (to \B p and under \B v) of \B g.
 
 \begin{code}
 IsSmuni : (b : Bangu) → Smuni → Setcidu b → Prenu → Smuvanbi → Set
