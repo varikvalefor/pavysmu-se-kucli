@@ -260,6 +260,6 @@ pretiPe'a : {b : Bangu}
                   (let F = λ p → Setesejimpe p s × Slabu sm p in
                    F p₁ × F p₂))))
 pretiPe'a {b} {s} Pb p₁ p₂ S₁ S₂ C =
-  {!!} , {!!}
+  Σ.proj₁ (Pb s p₁ S₁) , {!!}
 \end{code}
 \end{document}
