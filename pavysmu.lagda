@@ -266,7 +266,7 @@ pretiPe'a {b} {s} Pb p₁ p₂ S₁ S₂ C =
                  (Pavysmu.nis
                    Ps₁
                    _
-                   {!!})
+                   (Pavysmu.is $ Σ.proj₂ (Pb s) p₁ S₁))
                  (Σ.proj₂ (Pb s) p₂ S₂)
 \end{code}
 \end{document}
