@@ -17,10 +17,14 @@ open import Relation.Binary.PropositionalEquality
   using (
     _≡_
   )
+\end{code}
 
+\begin{code}
 Prenu : Set
 Prenu = {!!}
+\end{code}
 
+\begin{code}
 Bangu : Set
 Bangu = {!!}
 
@@ -67,13 +71,17 @@ PavysmuSetcidu b s = (p : Prenu)
 
 PavysmuBangu : Bangu → Set
 PavysmuBangu b = (s : Setcidu b) → PavysmuSetcidu b s
+\end{code}
 
+\begin{code}
 Setesejimpe : ∀ {a} → {A : Set a} → Prenu → A → Set a
 Setesejimpe = {!!}
 
 Slabu : ∀ {a} → {A : Set a} → A → Prenu → Set a
 Slabu = {!!}
+\end{code}
 
+\begin{code}
 pretiPe'a : {b : Bangu}
           → {s : Setcidu b}
           → PavysmuBangu b
