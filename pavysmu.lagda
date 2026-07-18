@@ -260,8 +260,11 @@ pretiPe'a : {b : Bangu}
                   (let F = λ p → Setesejimpe p s × Slabu sm p in
                    F p₁ × F p₂))))
 pretiPe'a {b} {s} Pb p₁ p₂ S₁ S₂ C =
-  Σ.proj₁ (Pb s p₁ S₁) , (Ps₁ , {!!}) , {!!}
+  Σ.proj₁ (Pb s p₁ S₁) , (Ps₁ , Ps₂) , {!!} , {!!}
   where
   Ps₁ = Σ.proj₂ $ Pb s p₁ S₁
+  Ps₂ = ≡.subst (λ sm → Pavysmu b s sm p₂ $ banguSmuvanbi b)
+                 {!!}
+                 (Σ.proj₂ $ Pb s p₂ S₂)
 \end{code}
 \end{document}
