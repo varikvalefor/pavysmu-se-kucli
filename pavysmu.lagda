@@ -210,8 +210,8 @@ record Pavysmu (b : Bangu)
   field
     is : IsSmuni b sm st p (banguSmuvanbi b)
     nis : (sm' : Smuni)
-        → ¬_ $ sm ≡ sm'
-        → ¬_ $ IsSmuni b sm' st p $ banguSmuvanbi b
+        → IsSmuni b sm' st p $ banguSmuvanbi b
+        → sm ≡ sm'
 \end{code}
 
 \subsection{lo se ctaipe co su'u lo selsku cu pavysmu / The Types regarding Utterances which are Semantically Unambiguous}
