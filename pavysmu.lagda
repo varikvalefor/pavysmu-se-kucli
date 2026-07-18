@@ -386,6 +386,12 @@ Jimpe→Slabu = {!!}
 \end{code}
 
 \section{tu'a le se kucli be la .varik. / The Subject of the Curiosity of VARIK}
+\paragraph{la .lojban.
+ni'o sa'u la'oi .\F{pretiPe'a}.\ ctaipe le su'u ro da poi ke'a pavysmu bangu zo'u ro de poi ke'a prenu je cu selbau da zo'u ro di poi ke'a te gerna da zo'u pavysmu lo se slabu je te se jimpe be de di va'o tu'a da\ldots kei fo tu'a le se sruma noi ku'i la .varik.\ na birti tu'a ke'a
+
+\paragraph{Engish}
+\F{pretiPe'a} is a proof (of that for all semantically unambiguous/precise languages $b$, for all prenu $p$, for all $b$ utterances $u$, $u$ is semantically unambiguous (under the $b$ context) for $u$, the meaning of $u$ is familiar to $p$, and the meaning of $u$ is understood by $p$)\ldots under the proof context of assumptions $s$.  But VARIK is not certain about $s$.
+
 
 \begin{code}
 pretiPe'a : {b : Bangu}
