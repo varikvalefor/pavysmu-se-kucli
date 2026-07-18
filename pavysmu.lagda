@@ -3,7 +3,7 @@ open import Function
   using (
     _$_
   )
-pen import Data.Product
+open import Data.Product
   using (
     Σ
   )
@@ -57,7 +57,12 @@ record Pavysmu (b : Bangu)
         → ¬_ $ IsSmuni b sm' st p $ banguSmuvanbi b
 
 PavysmuSetcidu : (b : Bangu) → (s : Setcidu b) → Set
-PavysmuSetcidu b s = (p : Prenu) → Selbau p b → Σ Smuni $ λ sm → Pavysmu b sm s p $ banguSmuvanbi b
+PavysmuSetcidu b s = (p : Prenu)
+                   → Selbau p b
+                   → (Σ
+                       Smuni
+                       (λ sm →
+                         (Pavysmu b sm s p $ banguSmuvanbi b)))
 
 PavysmuBangu : Bangu → Set
 PavysmuBangu b = (s : Setcidu b) → PavysmuSetcidu b s
