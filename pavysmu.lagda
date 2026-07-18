@@ -291,7 +291,7 @@ PavysmuSetcidu b s = (Σ
 
 \subsection{lo se ctaipe co su'u pavysmu bangu / The Types regarding Semantically Unambiguous Languages}
 \paragraph{la .lojban.}
-ni'o ga jo ctaipe la'e zoi zoi.\ \F{PavysmuBangu} \B b .zoi.\ gi ro da poi ke'a te gerna la'e zo'oi .\B b. zo'u lo su'o co'e cu pavysmu da lo ro prenu je ke selbau be zo'e ja la'e zo'oi .\B g.\ va'o tu'a la'e zo'oi .\B b.\sds  .i sa'u ru'e ga jo ctaipe la'oi .\B b.\ gi la'e zo'oi .\B b.\ pavysmu bangu
+ni'o ga jo ctaipe la'e zoi zoi.\ \F{PavysmuBangu} \B b .zoi.\ gi ro da poi ke'a te gerna la'e zo'oi .\B b. zo'u lo su'o co'e cu pavysmu da lo ro prenu je ke selbau be zo'e ja la'e zo'oi .\B g.\ va'o tu'a la'e zo'oi .\B b.\sds  .i sa'u ru'e ga jo ctaipe la'e zoi zoi. \F{PavysmuBangu} \B b .zoi.\ gi la'e zo'oi .\B b.\ pavysmu bangu
 
 \paragraph{English}
 If-and-only-if a term of \F{PavysmuSetcidu} \B b exists, then for all \B b utterances $g$, $g$ is semantically unambiguous/precise (under the \B b context) to all prenu which use \B b, and the meaning is common to all prenu which use \B b.  A term of \F{PavysmuSetcidu} \B b exists iff \B b is a semantically unambiguous/precise language.
