@@ -100,6 +100,8 @@
 \section{le vrici / Miscellaneous}
 
 \begin{code}
+{-# OPTIONS --safe #-}
+
 open import Function
   using (
     _$_
