@@ -97,6 +97,29 @@
   VARIK ``asks'' (via Agda) about whether for all prenu $p_1$, for all prenu $p_2$, if $p_1$ and $p_2$ use a language which is semantically unambiguous and precise, then $p_1$ and $p_2$ are sufficient (for that $p_1$ does not state stuff which is new/unfamiliar to $p_2$) in resembling.  VARIK does not attempt or desire that VARIK convinces some prenu which is not VARIK.
 \end{abstract}
 
+\section{le co'e ja krinu / The Reason or Whatever}
+\subsection{la .lojban.}
+ni'o la .varik.\ cu jinvi le du'u lidne tu'a le te tcidu fa lo nu la .varik.\ cu benji fi le tavla kumfa pe'a fa lu
+
+\begin{quote}
+	ni'o la .varik.\ cu kucli lo du'u xu kau ro da poi ke'a prenu zo'u ro de poi ke'a prenu zo'u ga naja pavysmu bangu da je de gi da ce de banzuka ko'a xi no goi lo ka ce'u simxa lo ka ce'u xi re xi pa smimlu ce'u xi re xi re tu'a lo sidbo ge'u lo ka da ne cusku lo cnino be de \\
+	.i la .varik.\ cu zukyjdipei lo ka ce'u jimpe ciksi le sidbo fo tu'a lo ctaipe
+
+	.i ji'a la .varik.\ cu jinvi le du'u le glibau je la .lojban.\ cu jai filri'a lo nu vo'a cusku tu'a lo ka ce'u prami kei kei ri'a zo'e joi le su'u le glibau je la .lojban.\ cu smuvrici bangu
+\end{quote}
+
+li'u
+
+\subsection{English}
+VARIK opines that a thing which precedes that VARIK hacks on the document is that VARIK sends (to a chatroom) the message of the quote block.
+
+\begin{quote}
+	VARIK is curious about whether (for all prenu $p_1$, for all prenu $p_2$, if $p_1$ and $p_2$ use a language which is semantically unambiguous and precise, then $p_1$ and $p_2$ are sufficient (for that $p_1$ does not state stuff which is new/unfamiliar to $p_2$) in resembling). \\
+	VARIK considers using (for explaining the idea) a proof.
+
+	Additionally, VARIK opines that the cause of that (English and Lojban permit that VARIK communicates stuff regarding loving) is that English and Lojban are semantically ambiguous/vague.
+\end{quote}
+
 \section{le vrici / Miscellaneous}
 
 \begin{code}
