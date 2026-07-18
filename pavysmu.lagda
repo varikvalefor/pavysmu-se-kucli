@@ -247,6 +247,8 @@ pretiPe'a : {b : Bangu}
           → {s : Setcidu b}
           → PavysmuBangu b
           → (p₁ p₂ : Prenu)
+          → Selbau p₁ b
+          → Selbau p₂ b
           → Cusku {b} p₁ s
           → (Σ
               Smuni
