@@ -254,6 +254,30 @@ Smuni→Jimpe : (b : Bangu)
 Smuni→Jimpe = {!!}
 \end{code}
 
+\subsection{le ctaipe be tu'a lo su'u jimpe fi lo se smuni naja le smuni / The Proof of that (the Signifier is Understood Only-If the Signified is Understood)}
+
+\begin{code}
+*Jimpe→Jimpe : (b : Bangu)
+             → (sm : Smuni)
+             → (g : Setcidu b)
+             → (p : Prenu)
+             → IsSmuni b sm g p $ banguSmuvanbi b
+             → Setesejimpe p g
+             → Setesejimpe p sm
+*Jimpe→Jimpe = {!!}
+\end{code}
+
+\subsection{le ctaipe be le su'u setese jimpe naja cu se slabu / The Proof of that (Understanding implies Being Familiar)}
+
+\begin{code}
+Jimpe→Slabu : ∀ {a} → {A : Set a}
+            → {x : A}
+            → {p : Prenu}
+            → Setesejimpe p x
+            → Slabu x p
+Jimpe→Slabu = {!!}
+\end{code}
+
 \section{tu'a le se kucli be la .varik. / The Subject of the Curiosity of VARIK}
 
 \begin{code}
