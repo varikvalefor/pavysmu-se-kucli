@@ -244,30 +244,19 @@ PavysmuBangu b = (s : Setcidu b) → PavysmuSetcidu b s
 
 \begin{code}
 pretiPe'a : {b : Bangu}
-          → {s : Setcidu b}
           → PavysmuBangu b
-          → (p₁ p₂ : Prenu)
-          → Selbau p₁ b
-          → Selbau p₂ b
-          → Cusku {b} p₁ s
+          → (s : Setcidu b)
+          → (p : Prenu)
+          → Selbau p b
           → (Σ
               Smuni
               (λ sm →
                 (_×_
-                  (let bs = banguSmuvanbi b in
-                   let Ps = λ p → Pavysmu b s sm p bs in
-                    Ps p₁ × Ps p₂)
-                  (let F = λ p → Setesejimpe p s × Slabu sm p in
-                   F p₁ × F p₂))))
-pretiPe'a {b} {s} Pb p₁ p₂ S₁ S₂ C =
-  Σ.proj₁(Pb s) , (Ps₁ , Ps₂) , {!!} , {!!}
+                  (Pavysmu b s sm p $ banguSmuvanbi b)
+                  (Setesejimpe p s × Slabu sm p))))
+pretiPe'a {b} Pb s p S = sm , (Ps , {!!} , {!!})
   where
-  Ps₁ = Σ.proj₂ (Pb s) p₁ S₁
-  Ps₂ = ≡.subst (λ sm → Pavysmu b s sm p₂ $ banguSmuvanbi b)
-                 (Pavysmu.nis
-                   Ps₁
-                   _
-                   (Pavysmu.is $ Σ.proj₂ (Pb s) p₁ S₁))
-                 (Σ.proj₂ (Pb s) p₂ S₂)
+  sm = Σ.proj₁ $ Pb s
+  Ps = Σ.proj₂ (Pb s) p S
 \end{code}
 \end{document}
