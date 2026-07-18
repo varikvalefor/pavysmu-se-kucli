@@ -254,7 +254,8 @@ pretiPe'a : {b : Bangu}
               Smuni
               (λ sm →
                 (_×_
-                  (let Ps = λ p → Pavysmu b s sm p $ banguSmuvanbi b in
+                  (let bs = banguSmuvanbi b in
+                   let Ps = λ p → Pavysmu b s sm p bs in
                     Ps p₁ × Ps p₂)
                   (let F = λ p → Setesejimpe p s × Slabu sm p in
                    F p₁ × F p₂))))
