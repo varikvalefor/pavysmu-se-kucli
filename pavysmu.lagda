@@ -226,12 +226,11 @@ record Pavysmu (b : Bangu)
 
 \begin{code}
 PavysmuSetcidu : (b : Bangu) → (s : Setcidu b) → Set
-PavysmuSetcidu b s = (p : Prenu)
-                   → Selbau p b
-                   → (Σ
+PavysmuSetcidu b s = (Σ
                        Smuni
-                       (λ sm →
-                         (Pavysmu b s sm p $ banguSmuvanbi b)))
+                       (λ sm → (p : Prenu)
+                             → Selbau p b
+                             → (Pavysmu b s sm p $ banguSmuvanbi b)))
 \end{code}
 
 \subsection{lo se ctaipe co su'u pavysmu bangu / The Types regarding Semantically Unambiguous Languages}
@@ -260,14 +259,14 @@ pretiPe'a : {b : Bangu}
                   (let F = λ p → Setesejimpe p s × Slabu sm p in
                    F p₁ × F p₂))))
 pretiPe'a {b} {s} Pb p₁ p₂ S₁ S₂ C =
-  Σ.proj₁ (Pb s p₁ S₁) , (Ps₁ , Ps₂) , {!!} , {!!}
+  Σ.proj₁(Pb s) , (Ps₁ , Ps₂) , {!!} , {!!}
   where
-  Ps₁ = Σ.proj₂ $ Pb s p₁ S₁
+  Ps₁ = Σ.proj₂ (Pb s) p₁ S₁
   Ps₂ = ≡.subst (λ sm → Pavysmu b s sm p₂ $ banguSmuvanbi b)
                  (Pavysmu.nis
-                   (Σ.proj₂ $ Pb s p₂ S₂)
-                   (Σ.proj₁ $ Pb s p₁ S₁)
+                   Ps₁
+                   _
                    {!!})
-                 (Σ.proj₂ $ Pb s p₂ S₂)
+                 (Σ.proj₂ (Pb s) p₂ S₂)
 \end{code}
 \end{document}
