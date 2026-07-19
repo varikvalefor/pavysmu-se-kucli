@@ -401,10 +401,9 @@ pretiPe'a : {b : Bangu}
           → Selbau p b
           → (Σ
               Smuni
-              (λ sm →
-                (_×_
-                  (Pavysmu b s sm p)
-                  (Setesejimpe p s × Slabu sm p))))
+              (λ sm → Pavysmu b s sm p
+                    × Setesejimpe p s
+                    × Slabu sm p))
 pretiPe'a {b} Pb s p S = sm , (Ps , jimpe , slabu)
   where
   sm = Σ.proj₁ $ Pb s
