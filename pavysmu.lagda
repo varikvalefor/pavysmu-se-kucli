@@ -171,10 +171,12 @@ Prenu = {!!}
 
 \subsection{le se ctaipe be zo'e ja lo smuni / The Type of Meanings or Whatever}
 \paragraph{la .lojban.}
-ni'o la'oi .\F{Smuni}.\ se ctaipe lo smuni\ldots ku ja lo co'e ja sinxa be ri\sds  .i la .varik.\ na birti lo du'u xu kau cmaci co'e fa lo smuni
+ni'o la'oi .\F{Smuni}.\ se ctaipe lo smuni\ldots ku ja lo co'e ja sinxa be ri\sds  .i la .varik.\ na birti lo du'u xu kau cmaci co'e fa lo smuni\\
+.i la .varik.\ cu jinvi le du'u me'oi .ironic.\ fa le su'u vo'a na cusku lo se du'u lo smuni cu mo kau va'o tu'a lo papri co si'o sinxa
 
 \paragraph{English}
-\F{Smuni} is the type of meanings\ldots or representations/whatever of meanings.  VARIK is not certain about whether meanings are mathematical objects.
+\F{Smuni} is the type of meanings\ldots or representations/whatever of meanings.  VARIK is not certain about whether meanings are mathematical objects.\\
+VARIK opines that a thing which is ironic is that VARIK does not explain (in a semiotics paper) the idea of ``meanings''.
 
 \begin{code}
 Smuni : Set
