@@ -142,10 +142,6 @@ open import Data.Product
     _,_;
     Σ
   )
-open import Relation.Nullary
-  using (
-    ¬_
-  )
 open import Relation.Binary.PropositionalEquality
   as ≡
   using (
