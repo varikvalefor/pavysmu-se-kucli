@@ -244,10 +244,10 @@ banguSmuvanbi = {!!}
 
 \subsection{lo se ctaipe be lo te gerna / The Types of Grammatical/Linguistic Utterances}
 \paragraph{la .lojban.}
-ni'o lo ro co'e cu te gerna la'e zo'oi .\B b.\ jo cu ctaipe ja ke se pagbu be lo ctaipe ke'e be la'e zoi zoi.\ \F{Selbau} \B b\ .zoi.
+ni'o lo ro co'e cu te gerna la'e zo'oi .\B b.\ jo cu ctaipe ja ke se pagbu be lo ctaipe ke'e be la'e zoi zoi.\ \F{Tegerna} \B b\ .zoi.
 
 \paragraph{English}
-\F{Selbau} \B b is the type of things which are grammatical with regard to \B b, or a term of \F{Selbau} \B b ``contains'' an utterance of \B b.  A term of \B b is/represents an utterance of the \B b language.
+\F{Tegerna} \B b is the type of things which are grammatical with regard to \B b, or a term of \F{Selbau} \B b ``contains'' an utterance of \B b.  A term of \B b is/represents an utterance of the \B b language.
 
 \begin{code}
 Tegerna : Bangu → Set
