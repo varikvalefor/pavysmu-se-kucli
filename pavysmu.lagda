@@ -158,7 +158,7 @@ open import Relation.Binary.PropositionalEquality
 \subsection{le se ctaipe be lo co'e ja sinxa be lo prenu / The Type of Representations/Whatever of Prenu}
 \paragraph{la .lojban.}
 ni'o la'oi .\F{Prenu}.\ se ctaipe lo co'e ja sinxa be lo prenu\\
-.i la .varik.\ na jinvi le du'u lo prenu cu se ctaipe lo su'o co'e\sds  .i la'e di'u lijda co'e
+.i la .varik.\ na jinvi le du'u lo prenu cu ctaipe lo su'o co'e\sds  .i la'e di'u lijda co'e
 
 \paragraph{English}
 \F{Prenu} is the type of representations/whatever of prenu.\\
