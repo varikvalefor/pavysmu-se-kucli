@@ -380,7 +380,7 @@ ni'o sa'u la'o zoi.\ \F{Jimpe→Slabu}\ .zoi.\ ctaipe ko'a goi le su'u ro da poi
 .i la .varik.\ cu kucli je cu djica curmi tu'a lo pinka
 
 \paragraph{English}
-Basically, \F{Smuni→Jimpe} is a proof of that (for all prenu $p$, for all utterances $b$, $b$ is understood by $p$ only-if $b$ is familiar to $p$).  VARIK is not certain about whether VARIK believes the term/idea.  That (VARIK disbelieves the idea) is not contemporaneous with writing the current sentence.  \\
+Basically, \F{Jimpe→Slabu} is a proof of that (for all prenu $p$, for all utterances $b$, $b$ is understood by $p$ only-if $b$ is familiar to $p$).  VARIK is not certain about whether VARIK believes the term/idea.  That (VARIK disbelieves the idea) is not contemporaneous with writing the current sentence.  \\
 VARIK is curious and welcomes comments.
 
 \begin{code}
