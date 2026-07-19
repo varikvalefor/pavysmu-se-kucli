@@ -364,10 +364,10 @@ Basically, \F{*Jimpe→Jimpe} is a proof of that (for all prenu $p$, for all utt
 VARIK is curious and welcomes comments.
 
 \begin{code}
-*Jimpe→Jimpe : (b : Bangu)
+*Jimpe→Jimpe : (p : Prenu)
+             → (b : Bangu)
              → (sm : Smuni)
              → (g : Tegerna b)
-             → (p : Prenu)
              → IsSmuni b sm g p $ banguSmuvanbi b
              → Setesejimpe p g
              → Setesejimpe p sm
@@ -419,6 +419,6 @@ pretiPe'a {b} Pb s p S = sm , (Ps , jimpe , slabu)
   slabu = (Jimpe→Slabu
             {x = sm}
             {p}
-            (*Jimpe→Jimpe b sm s p (Pavysmu.is Ps) jimpe))
+            (*Jimpe→Jimpe p b sm s (Pavysmu.is Ps) jimpe))
 \end{code}
 \end{document}
