@@ -222,10 +222,10 @@ Slabu = {!!}
 \section{le srana be lo bangu / Language Stuff}
 \subsection{le se ctaipe be lo bangu / The Type of Languages}
 \paragraph{la .lojban.}
-ni'o lo ro co'e cu bangu jo cu ctaipe la'oi .\F{Bangu}.
+ni'o lo ro co'e cu bangu jo cu ctaipe la'oi .\F{Bangu}.\sds  .i vy jinvi le du'u lo du'u xu kau me'oi .idiolect.\ na vajni fi tu'a le papri
 
 \paragraph{English}
-For all $x$, $x$ is a term of \F{Bangu} iff $x$ is a language.
+For all $x$, $x$ is a term of \F{Bangu} iff $x$ is a language.  VARIK opines that whether the things are idiolects is not important with regard to the paper.
 
 \begin{code}
 Bangu : Set
