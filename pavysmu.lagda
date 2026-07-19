@@ -92,8 +92,11 @@
 
 \begin{abstract}
   \noindent
+  \paragraph{la .lojban.}
   ni'o la .varik.\ cu retsku pe'a bau la'oi .Agda. fe lo se du'u xu kau ro da poi ke'a prenu zo'u ro de poi ke'a prenu zo'u ga naja pavysmu bangu da je de gi da ce de banzuka ko'a xi no goi lo ka ce'u simxa lo ka ce'u xi re xi pa smimlu ce'u xi re xi re tu'a lo sidbo ge'u lo ka da na cusku lo cnino be de\sds  .i la .varik.\ na troci ja djica lo nu vo'a bitygau lo su'o prenu jenai ke du be ri
 
+  \noindent
+  \paragraph{English}
   VARIK ``asks'' (via Agda) about whether for all prenu $p_1$, for all prenu $p_2$, if $p_1$ and $p_2$ use a language which is semantically unambiguous and precise, then $p_1$ and $p_2$ are sufficient (for that $p_1$ does not state stuff which is new/unfamiliar to $p_2$) in resembling.  VARIK does not attempt or desire that VARIK convinces some prenu which is not VARIK.
 \end{abstract}
 
@@ -110,6 +113,8 @@ ni'o la .varik.\ cu jinvi le du'u lidne tu'a le te tcidu fa lo nu la .varik.\ cu
 
 li'u
 
+.i le te tcidu cu co'e ja velski ja velcki le preti pe'a be fi la .varik.\sds  .i la .varik.\ na djica lo nu tugni zi'o tu'a le ctaipe\sds  .i la .varik.\ cu co'e ja retsku jenai cu xusra
+
 \subsection{English}
 VARIK opines that a thing which precedes that VARIK hacks on the document is that VARIK sends (to a chatroom) the message of the quote block.
 
@@ -119,6 +124,8 @@ VARIK opines that a thing which precedes that VARIK hacks on the document is tha
 
 	Additionally, VARIK opines that the cause of that (English and Lojban permit that VARIK communicates stuff regarding loving) is that English and Lojban are semantically ambiguous/vague.
 \end{quote}
+
+The document is a description/definition/whateve of a question/whatever which is asked by VARIK.  VARIK does not desire that prenu agree about the proof.  VARIK asks or does whatever.  VARIK does not assert.
 
 \section{le vrici / Miscellaneous}
 
