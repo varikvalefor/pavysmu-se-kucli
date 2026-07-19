@@ -250,8 +250,8 @@ ni'o lo ro co'e cu te gerna la'e zo'oi .\B b.\ jo cu ctaipe ja ke se pagbu be lo
 \F{Selbau} \B b is the type of things which are grammatical with regard to \B b, or a term of \F{Selbau} \B b ``contains'' an utterance of \B b.  A term of \B b is/represents an utterance of the \B b language.
 
 \begin{code}
-Setcidu : Bangu → Set
-Setcidu = {!!}
+Tegerna : Bangu → Set
+Tegerna = {!!}
 \end{code}
 
 \subsection{le su'u cusku kei se ctaipe be lo te gerna / The Types regarding Saying/Communicating Things}
@@ -262,7 +262,7 @@ ni'o ga jo ctaipe la'e zoi zoi.\ \F{Cusku} \B p \B s\ .zoi.\ gi lo me'oi .\B p.\
 A term of \F{Cusku} \B p \B s exists iff \B s is communicated by the \B p prenu.
 
 \begin{code}
-Cusku : {b : Bangu} → Prenu → Setcidu b → Set
+Cusku : {b : Bangu} → Prenu → Tegerna b → Set
 Cusku = {!!}
 \end{code}
 
@@ -274,7 +274,7 @@ ni'o ga jo ctaipe la'e zoi zoi.\ \F{IsSmuni} \B b \B s \B g \B p \B v\ .zoi.\ gi
 If-and-only-if a term of \F{IsSmuni} \B b \B s \B g \B p \B v exists, then \B s is the meaning (to \B p and under \B v) of \B g.
 
 \begin{code}
-IsSmuni : (b : Bangu) → Smuni → Setcidu b → Prenu → Smuvanbi → Set
+IsSmuni : (b : Bangu) → Smuni → Tegerna b → Prenu → Smuvanbi → Set
 IsSmuni = {!!}
 \end{code}
 
@@ -287,7 +287,7 @@ If-and-only-if a term of \AgdaRecord{Pavysmu} \B b \B g \B s \B p exists, then \
 
 \begin{code}
 record Pavysmu (b : Bangu)
-               (st : Setcidu b)
+               (st : Tegerna b)
                (sm : Smuni)
                (p : Prenu) : Set
                where
@@ -300,14 +300,14 @@ record Pavysmu (b : Bangu)
 
 \subsection{lo se ctaipe co su'u lo selsku cu pavysmu / The Types regarding Utterances which are Semantically Unambiguous}
 \paragraph{la .lojban.}
-ni'o ga jo ctaipe la'e zoi zoi.\ \F{PavysmuSetcidu} \B b \B g .zoi.\ gi lo su'o co'e cu pavysmu zo'e ja la'e zo'oi .\B g.\ lo ro prenu je ke selbau be zo'e ja la'e zo'oi .\B g.\ va'o tu'a la'e zo'oi .\B b.
+ni'o ga jo ctaipe la'e zoi zoi.\ \F{PavysmuTegerna} \B b \B g .zoi.\ gi lo su'o co'e cu pavysmu zo'e ja la'e zo'oi .\B g.\ lo ro prenu je ke selbau be zo'e ja la'e zo'oi .\B g.\ va'o tu'a la'e zo'oi .\B b.
 
 \paragraph{English}
-If-and-only-if a term of \F{PavysmuSetcidu} \B b \B g exists, then \B g is semantically unambiguous/precise (under the \B b context) to all prenu which use \B b, and the meaning is common to all prenu which use \B b.
+If-and-only-if a term of \F{PavysmuTegerna} \B b \B g exists, then \B g is semantically unambiguous/precise (under the \B b context) to all prenu which use \B b, and the meaning is common to all prenu which use \B b.
 
 \begin{code}
-PavysmuSetcidu : (b : Bangu) → (s : Setcidu b) → Set
-PavysmuSetcidu b s = (Σ
+PavysmuTegerna : (b : Bangu) → (s : Tegerna b) → Set
+PavysmuTegerna b s = (Σ
                        Smuni
                        (λ sm → (p : Prenu)
                              → Selbau p b
@@ -319,11 +319,11 @@ PavysmuSetcidu b s = (Σ
 ni'o ga jo ctaipe la'e zoi zoi.\ \F{PavysmuBangu} \B b .zoi.\ gi ro da poi ke'a te gerna la'e zo'oi .\B b. zo'u lo su'o co'e cu pavysmu da lo ro prenu je ke selbau be zo'e ja la'e zo'oi .\B g.\ va'o tu'a la'e zo'oi .\B b.\sds  .i sa'u ru'e ga jo ctaipe la'e zoi zoi. \F{PavysmuBangu} \B b .zoi.\ gi la'e zo'oi .\B b.\ pavysmu bangu
 
 \paragraph{English}
-If-and-only-if a term of \F{PavysmuSetcidu} \B b exists, then for all \B b utterances $g$, $g$ is semantically unambiguous/precise (under the \B b context) to all prenu which use \B b, and the meaning is common to all prenu which use \B b.  A term of \F{PavysmuSetcidu} \B b exists iff \B b is a semantically unambiguous/precise language.
+If-and-only-if a term of \F{PavysmuTegerna} \B b exists, then for all \B b utterances $g$, $g$ is semantically unambiguous/precise (under the \B b context) to all prenu which use \B b, and the meaning is common to all prenu which use \B b.  A term of \F{PavysmuTegerna} \B b exists iff \B b is a semantically unambiguous/precise language.
 
 \begin{code}
 PavysmuBangu : Bangu → Set
-PavysmuBangu b = (s : Setcidu b) → PavysmuSetcidu b s
+PavysmuBangu b = (s : Tegerna b) → PavysmuTegerna b s
 \end{code}
 
 \section{le se sruma pe'a / ``Assumptions''}
@@ -340,7 +340,7 @@ VARIK is curious and welcomes comments.
 \begin{code}
 Smuni→Jimpe : (b : Bangu)
             → (sm : Smuni)
-            → (g : Setcidu b)
+            → (g : Tegerna b)
             → (p : Prenu)
             → IsSmuni b sm g p $ banguSmuvanbi b
             → Setesejimpe p g
@@ -359,7 +359,7 @@ VARIK is curious and welcomes comments.
 \begin{code}
 *Jimpe→Jimpe : (b : Bangu)
              → (sm : Smuni)
-             → (g : Setcidu b)
+             → (g : Tegerna b)
              → (p : Prenu)
              → IsSmuni b sm g p $ banguSmuvanbi b
              → Setesejimpe p g
@@ -386,17 +386,17 @@ Jimpe→Slabu = {!!}
 \end{code}
 
 \section{tu'a le se kucli be la .varik. / The Subject of the Curiosity of VARIK}
-\paragraph{la .lojban.
+\paragraph{la .lojban.}
 ni'o sa'u la'oi .\F{pretiPe'a}.\ ctaipe le su'u ro da poi ke'a pavysmu bangu zo'u ro de poi ke'a prenu je cu selbau da zo'u ro di poi ke'a te gerna da zo'u pavysmu lo se slabu je te se jimpe be de di va'o tu'a da\ldots kei fo tu'a le se sruma noi ku'i la .varik.\ na birti tu'a ke'a
 
 \paragraph{Engish}
-\F{pretiPe'a} is a proof (of that for all semantically unambiguous/precise languages $b$, for all prenu $p$, for all $b$ utterances $u$, $u$ is semantically unambiguous (under the $b$ context) for $u$, the meaning of $u$ is familiar to $p$, and the meaning of $u$ is understood by $p$)\ldots under the proof context of assumptions $s$.  But VARIK is not certain about $s$.
+Basically, \F{pretiPe'a} is a proof (of that for all semantically unambiguous/precise languages $b$, for all prenu $p$, for all $b$ utterances $u$, $u$ is semantically unambiguous (under the $b$ context) for $u$, the meaning of $u$ is familiar to $p$, and the meaning of $u$ is understood by $p$)\ldots under the proof context of assumptions $s$.  But VARIK is not certain about $s$.
 
 
 \begin{code}
 pretiPe'a : {b : Bangu}
           → PavysmuBangu b
-          → (s : Setcidu b)
+          → (s : Tegerna b)
           → (p : Prenu)
           → Selbau p b
           → (Σ
