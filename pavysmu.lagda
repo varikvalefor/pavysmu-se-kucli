@@ -396,10 +396,12 @@ Jimpe→Slabu = {!!}
 
 \subsection{le ctaipe be lo su'u djuno gasnu cusku naja cu cusku lo na se slabu / The Proof of that (Communicating Implies Stating a Thing which is Unfamiliar)}
 \paragraph{la .lojban.}
-ni'o sa'u ko'a goi la'o zoi.\ \F{Comm→¬Slabu}\ .zoi.\ ctaipe le su'u ro da poi ke'a prenu zo'u ro de poi ke'a prenu zo'u ro di zo'u ga naja da me'oi .communicate... cei ke gasnu be lo nu de djuno di gi di na slabu de\sds  .i ku'i la .varik.\ na birti lo du'u vo'a cinmo ma kau tu'a ko'a
+ni'o sa'u ko'a goi la'o zoi.\ \F{Comm→¬Slabu}\ .zoi.\ ctaipe le su'u ro da poi ke'a prenu zo'u ro de poi ke'a prenu zo'u ro di zo'u ga naja da me'oi .communicate... cei ke gasnu be lo nu de djuno di gi di na slabu de\sds  .i ku'i la .varik.\ na birti lo du'u vo'a cinmo ma kau tu'a ko'a\\
+.i la .varik.\ cu kajde fi zo'e joi le su'u la'o zoi.\ \F{Comm→¬Slabu}\ .zoi. jai tolmapti tu'a la'o zoi.\ \F{Jimpe→Slabu}\ .zoi. ri'a zo'e joi le su'u vo'a na pilno lo temci logji
 
 \paragraph{English}
-Basically, \F{Comm→¬Slabu} is a proof of that (for all prenu $p$, for all prenu $r$, for all things $x$, if a thing which happens is that ($p$ communicates (to $r$) $x$) (which is that $p$ causes that $r$ knows $x$), then $x$ is not familiar to $r$).  But VARIK is not certain about the feelings (of VARIK) regarding \F{Comm→Slabu}.
+Basically, \F{Comm→¬Slabu} is a proof of that (for all prenu $p$, for all prenu $r$, for all things $x$, if a thing which happens is that ($p$ communicates (to $r$) $x$) (which is that $p$ causes that $r$ knows $x$), then $x$ is not familiar to $r$).  But VARIK is not certain about the feelings (of VARIK) regarding \F{Comm→Slabu}.\\
+VARIK cautions.  \F{Jimpe→Slabu} is incompatible with some \F{Jimpe→Slabu} things.  The reason is relevant to not using temporal logic.
 
 \begin{code}
 Comm→¬Slabu : (b : Bangu)
