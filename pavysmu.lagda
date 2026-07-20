@@ -520,8 +520,9 @@ pretiPe'a' b Pb g p₁ p₂ C = Fasnu-¬ {A = SLB} {f} S ¬S
   ¬S = Comm.f₀-¬slabu C
   bs = banguSmuvanbi b
   S : FasnuI f SLB
-  S = (Fasnu-Imp
-        {A = Selbau p₁ b × Selbau p₂ b × IsSmuni b s g p₁ bs}
+  S = (let Sm = IsSmuni b s g p₁ bs in
+       Fasnu-Imp
+        {A = Selbau p₁ b × Selbau p₂ b × Sm}
         {B = Slabu s p₂}
         (λ (sb₁ , sb , isS)
           → (Jimpe→Slabu
@@ -540,8 +541,7 @@ pretiPe'a' b Pb g p₁ p₂ C = Fasnu-¬ {A = SLB} {f} S ¬S
                     isS)
                   (Pavysmu.is $ Σ.proj₂ (Pb g) p₂ sb)))))
         f
-        (let Sm = IsSmuni b s g p₁ bs in
-         Fasnu×
+        (Fasnu×
           {A = Selbau p₁ b}
           {B = Selbau p₂ b × Sm}
           {f = f}
