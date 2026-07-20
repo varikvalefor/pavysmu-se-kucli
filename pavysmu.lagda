@@ -583,19 +583,14 @@ C→¬P b g p₁ p₂ C ps = Fasnu-¬ {A = Slabu s p₂} {f} S ¬S
           (Jimpe→Slabu
             {x = s}
             {p = p₂}
-            (*Jimpe→Jimpe
-              p₂
-              b
-              s
-              g
-              (Pavysmu.is ps')
-              (Smuni→Jimpe
-                b
-                s
-                g
-                p₂
-                (Pavysmu.is ps')))))
+            (Smuni→Jimpe* $ Pavysmu.is ps')))
         f
         ps)
+    where
+    Smuni→Jimpe* : IsSmuni b s g p₂ $ banguSmuvanbi b
+                 → Setesejimpe p₂ s
+    Smuni→Jimpe* x = *Jimpe→Jimpe p₂ b s g x SJ
+      where
+      SJ = Smuni→Jimpe b s g p₂ x
 \end{code}
 \end{document}
