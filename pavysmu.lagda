@@ -469,10 +469,10 @@ pretiPe'a {b} Pb s p S = sm , (Ps , jimpe , slabu)
 
 \subsection{le te cuxna versiio / The Alternate Version}
 \paragraph{la .lojban.}
-ni'o sa'u la'oi .\F{pretiPe'a}.\ ctaipe le su'u narcu'i fa lo nu lo su'o prenu cu jduno gasnu bau tu'a lo smuvrici bangu kei va'o tu'a lo co'e ja se sruma\ldots noi ku'i la .varik.\ na birti tu'a ke'a
+ni'o sa'u la'oi .\F{pretiPe'a'}.\ ctaipe le su'u narcu'i fa lo nu lo su'o prenu cu jduno gasnu bau tu'a lo smuvrici bangu kei va'o tu'a lo co'e ja se sruma\ldots noi ku'i la .varik.\ na birti tu'a ke'a
 
 \paragraph{Engish}
-Basically, \F{pretiPe'a} is a proof (of that communicating (via a semantically unambiguous/precise language) new information is impossible)\ldots under the proof context of assumptions $s$.  But VARIK is not certain about $s$.
+Basically, \F{pretiPe'a'} is a proof (of that communicating (via a semantically unambiguous/precise language) new information is impossible)\ldots under the proof context of assumptions $s$.  But VARIK is not certain about $s$.
 
 \begin{code}
 pretiPe'a' : (b : Bangu)
