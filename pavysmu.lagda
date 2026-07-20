@@ -571,7 +571,7 @@ C→¬P : (b : Bangu)
      → (p₁ p₂ : Prenu)
      → (C : Comm b p₁ p₂ g)
      → ¬_ $ FasnuI (Comm.f₀ C) $ Pavysmu b g (Comm.smuni C) p₂
-C→¬P b g p₁ p₂ C ps = Fasnu-¬ {A = Slabu s p₂} {f} S ¬S
+C→¬P b g _ p₂ C ps = Fasnu-¬ {A = Slabu s p₂} {f} S ¬S
   where
   s = Comm.smuni C
   f = Comm.f₀ C
