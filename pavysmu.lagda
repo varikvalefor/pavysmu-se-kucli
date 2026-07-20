@@ -494,7 +494,7 @@ pretiPe'a' b Pb g p₁ p₂ S₁ S₂ C = Σ.proj₂ ¬S S
           b
           (Σ.proj₁ $ Pb g)
           g
-          (IsS)
+          IsS
           (Smuni→Jimpe
             b
             (Σ.proj₁ $ Pb g)
