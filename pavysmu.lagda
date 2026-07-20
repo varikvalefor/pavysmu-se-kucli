@@ -494,12 +494,14 @@ pretiPe'a' b Pb g p₁ p₂ S₁ S₂ C = Σ.proj₂ ¬S S
           b
           (Σ.proj₁ $ Pb g)
           g
-          (Pavysmu.is $ Σ.proj₂ (Pb g) p₂ S₂)
+          (IsS)
           (Smuni→Jimpe
             b
             (Σ.proj₁ $ Pb g)
             g
             p₂
-            (Pavysmu.is $ Σ.proj₂ (Pb g) p₂ S₂))))
+            (IsS))))
+    where
+    IsS = Pavysmu.is $ Σ.proj₂ (Pb g) p₂ S₂
 \end{code}
 \end{document}
