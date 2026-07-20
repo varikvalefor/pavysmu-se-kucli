@@ -540,14 +540,15 @@ pretiPe'a' b Pb g p₁ p₂ C = Fasnu-¬ {A = SLB} {f} S ¬S
                     isS)
                   (Pavysmu.is $ Σ.proj₂ (Pb g) p₂ sb)))))
         f
-        (Fasnu×
+        (let Sm = IsSmuni b s g p₁ bs in
+         Fasnu×
           {A = Selbau p₁ b}
-          {B = Selbau p₂ b × IsSmuni b s g p₁ bs}
+          {B = Selbau p₂ b × Sm}
           {f = f}
           (C .Comm.f₀-selbau)
           (Fasnu×
             {A = Selbau p₂ b}
-            {B = IsSmuni b s g p₁ bs}
+            {B = Sm}
             {f = f}
             (Comm.f₀-selbau₂ C)
             (Comm.f₀-isSmuni C))))
