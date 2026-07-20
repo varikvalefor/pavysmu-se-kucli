@@ -142,6 +142,10 @@ open import Data.Product
     _,_;
     Σ
   )
+open import Relation.Nullary
+  using (
+    ¬_
+  )
 open import Relation.Binary.PropositionalEquality
   as ≡
   using (
@@ -259,16 +263,16 @@ Tegerna : Bangu → Set
 Tegerna = {!!}
 \end{code}
 
-\subsection{le su'u cusku kei se ctaipe be lo te gerna / The Types regarding Saying/Communicating Things}
+\subsection{le djuno rinka cusku se ctaipe / The Types Regarding Communicating New Information}
 \paragraph{la .lojban.}
-ni'o ga jo ctaipe la'e zoi zoi.\ \F{Cusku} \B p \B s\ .zoi.\ gi lo me'oi .\B p.\ prenu cu cusku la'e zo'oi .\B s.
+ni'o ga jo ctaipe la'e zoi zoi.\ \F{Comm} \B b \B p \B r \B g .zoi.\ gi ga je lo me'oi .\B p.\ prenu cu cusku la'e zo'oi .\B g.\ lo me'oi .\B r.\ prenu se ri'a lo nu lo me'oi .\B g.\ prenu cu jimpe fi le smuni be la'e zo'oi .\B g.\ bei lo me'oi .\B p.\ prenu
 
 \paragraph{English}
-A term of \F{Cusku} \B p \B s exists iff \B s is communicated by the \B p prenu.
+If-and-only-if a term of \F{Comm} \B p \B r \B g exists, then the \B p prenu communicates/says/writes (to the \B r prenu) \B g, and the \B r prenu receives the information, and the result is that the \B r prenu understands about the meaning (to the \B p prenu) of \B g.
 
 \begin{code}
-Cusku : {b : Bangu} → Prenu → Tegerna b → Set
-Cusku = {!!}
+Comm : (b : Bangu) → (p₁ p₂ : Prenu) → (g : Tegerna b) → Set
+Comm = {!!}
 \end{code}
 
 \subsection{le su'u smuni kei se ctaipe be lo te gerna / The Types regarding Being Meaningful}
@@ -390,6 +394,49 @@ Jimpe→Slabu : ∀ {a} → {A : Set a}
 Jimpe→Slabu = {!!}
 \end{code}
 
+\subsection{le ctaipe be lo su'u djuno gasnu cusku naja cu cusku lo na se slabu / The Proof of that (Communicating Implies Stating a Thing which is Unfamiliar)}
+\paragraph{la .lojban.}
+ni'o sa'u ko'a goi la'o zoi.\ \F{Comm→¬Slabu}\ .zoi.\ ctaipe le su'u ro da poi ke'a prenu zo'u ro de poi ke'a prenu zo'u ro di zo'u ga naja da me'oi .communicate... cei ke gasnu be lo nu de djuno di gi di na slabu de\sds  .i ku'i la .varik.\ na birti lo du'u vo'a cinmo ma kau tu'a ko'a
+
+\paragraph{English}
+Basically, \F{Comm→¬Slabu} is a proof of that (for all prenu $p$, for all prenu $r$, for all things $x$, if a thing which happens is that ($p$ communicates (to $r$) $x$) (which is that $p$ causes that $r$ knows $x$), then $x$ is not familiar to $r$).  But VARIK is not certain about the feelings (of VARIK) regarding \F{Comm→Slabu}.
+
+\begin{code}
+Comm→¬Slabu : (b : Bangu)
+            → (p₁ p₂ : Prenu)
+            → (g : Tegerna b)
+            → Comm b p₁ p₂ g
+            → (Σ
+                Smuni
+                (λ s → IsSmuni b s g p₁ (banguSmuvanbi b)
+                     × ¬ Slabu s p₂))
+Comm→¬Slabu = {!!}
+\end{code}
+
+\subsubsection{le versiio pe'a pe lo pavysmu bangu / The ``Version'' for Semantically Unambiguous/Precise Languages}
+
+\begin{code}
+PbComm→¬Slabu : (b : Bangu)
+              → (Pb : PavysmuBangu b)
+              → (p₁ p₂ : Prenu)
+              → Selbau p₁ b
+              → Selbau p₂ b
+              → (g : Tegerna b)
+              → Comm b p₁ p₂ g
+              → (let s = Σ.proj₁ $ Pb g in
+                 (_×_
+                   (IsSmuni b s g p₁ $ banguSmuvanbi b)
+                   (¬ Slabu s p₂)))
+PbComm→¬Slabu b Pb p₁ p₂ S₁ S₂ g x = ≡.subst F d $ Σ.proj₂ ¬S
+  where
+  ¬S = Comm→¬Slabu b p₁ p₂ g x
+  F = λ s → IsSmuni b s g p₁ (banguSmuvanbi b) × ¬ (Slabu s p₂)
+  d : Σ.proj₁ ¬S ≡ Σ.proj₁ (Pb g)
+  d = ≡.sym $ Pavysmu.nis Ps (Σ.proj₁ ¬S) $ Σ.proj₁ $ Σ.proj₂ ¬S
+    where
+    Ps = Σ.proj₂ (Pb g) p₁ S₁
+\end{code}
+
 \section{tu'a le se kucli be la .varik. / The Subject of the Curiosity of VARIK}
 \paragraph{la .lojban.}
 ni'o sa'u la'oi .\F{pretiPe'a}.\ ctaipe le su'u ro da poi ke'a pavysmu bangu zo'u ro de poi ke'a prenu je cu selbau da zo'u ro di poi ke'a te gerna da zo'u pavysmu lo se slabu je te se jimpe be de di va'o tu'a da\ldots kei fo tu'a le se sruma noi ku'i la .varik.\ na birti tu'a ke'a
@@ -418,5 +465,41 @@ pretiPe'a {b} Pb s p S = sm , (Ps , jimpe , slabu)
             {x = sm}
             {p}
             (*Jimpe→Jimpe p b sm s (Pavysmu.is Ps) jimpe))
+\end{code}
+
+\subsection{le te cuxna versiio / The Alternate Version}
+\paragraph{la .lojban.}
+ni'o sa'u la'oi .\F{pretiPe'a}.\ ctaipe le su'u narcu'i fa lo nu lo su'o prenu cu jduno gasnu bau tu'a lo smuvrici bangu kei va'o tu'a lo co'e ja se sruma\ldots noi ku'i la .varik.\ na birti tu'a ke'a
+
+\paragraph{Engish}
+Basically, \F{pretiPe'a} is a proof (of that communicating (via a semantically unambiguous/precise language) new information is impossible)\ldots under the proof context of assumptions $s$.  But VARIK is not certain about $s$.
+
+\begin{code}
+pretiPe'a' : (b : Bangu)
+           → PavysmuBangu b
+           → (g : Tegerna b)
+           → (p₁ p₂ : Prenu)
+           → Selbau p₁ b
+           → Selbau p₂ b
+           → ¬ Comm b p₁ p₂ g
+pretiPe'a' b Pb g p₁ p₂ S₁ S₂ C = Σ.proj₂ ¬S S
+  where
+  ¬S = PbComm→¬Slabu b Pb p₁ p₂ S₁ S₂ g C
+  S : Slabu (Σ.proj₁ $ Pb g) p₂
+  S = (Jimpe→Slabu
+        {x = Σ.proj₁ $ Pb g}
+        {p₂}
+        (*Jimpe→Jimpe
+          p₂
+          b
+          (Σ.proj₁ $ Pb g)
+          g
+          (Pavysmu.is $ Σ.proj₂ (Pb g) p₂ S₂)
+          (Smuni→Jimpe
+            b
+            (Σ.proj₁ $ Pb g)
+            g
+            p₂
+            (Pavysmu.is $ Σ.proj₂ (Pb g) p₂ S₂))))
 \end{code}
 \end{document}
