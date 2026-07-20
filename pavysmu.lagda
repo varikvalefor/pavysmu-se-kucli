@@ -529,7 +529,6 @@ pretiPe'a' b Pb g p₁ p₂ C = Fasnu-¬ {A = SLB} {f} S ¬S
               {x = s}
               {p₂}
               (Smuni→Jimpe*
-                p₂
                 (≡.subst
                   (λ s → IsSmuni b s g p₂ bs)
                   (Pavysmu.nis
@@ -550,11 +549,10 @@ pretiPe'a' b Pb g p₁ p₂ C = Fasnu-¬ {A = SLB} {f} S ¬S
             (Comm.f₀-selbau₂ C)
             (Comm.f₀-isSmuni C))))
     where
-    Smuni→Jimpe* : (p : Prenu)
-                 → IsSmuni b s g p $ banguSmuvanbi b
-                 → Setesejimpe p s
-    Smuni→Jimpe* p x = *Jimpe→Jimpe p b s g x SJ
+    Smuni→Jimpe* : IsSmuni b s g p₂ $ banguSmuvanbi b
+                 → Setesejimpe p₂ s
+    Smuni→Jimpe* x = *Jimpe→Jimpe p₂ b s g x SJ
       where
-      SJ = Smuni→Jimpe b s g p x
+      SJ = Smuni→Jimpe b s g p₂ x
 \end{code}
 \end{document}
