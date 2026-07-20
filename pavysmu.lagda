@@ -161,7 +161,7 @@ ni'o la'oi .\F{Fasnu}.\ se ctaipe lo sinxa be lo co'e fasnu\sds  .i tolsnuti fa 
 
 .i pe'a cai ji'a ga jo ctaipe la'e zoi zoi.\ \F{FasnuI} \B f \B x .zoi. gi la'e zo'oi .\B f.\ nu ctaipe la'e zo'oi .\B x.
 
-\paragraph{English}
+\subsubsection{English}
 \F{Fasnu} is the type of representations of events or whatever.  Being vague is intentional.  VARIK opines that \F{Fasnu} is not specific/restricted to the physical universe.
 
 ``A term of \F{FasnuI} \B f \B x exists iff \B f is an event of that a term of \B x exists'' is a metaphor.
