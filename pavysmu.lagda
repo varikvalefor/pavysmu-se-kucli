@@ -500,7 +500,7 @@ pretiPe'a' b Pb g p₁ p₂ S₁ S₂ C = Σ.proj₂ ¬S S
             (Σ.proj₁ $ Pb g)
             g
             p₂
-            (IsS))))
+            IsS)))
     where
     IsS : IsSmuni b (Σ.proj₁ $ (Pb g)) g p₂ $ banguSmuvanbi b
     IsS = Pavysmu.is $ Σ.proj₂ (Pb g) p₂ S₂
