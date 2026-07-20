@@ -541,7 +541,7 @@ pretiPe'a' b Pb g p₁ p₂ C = Fasnu-¬ {A = SLB} {f} S ¬S
           {A = Selbau p₁ b}
           {B = Selbau p₂ b × Sm}
           {f = f}
-          (C .Comm.f₀-selbau)
+          (Comm.f₀-selbau C)
           (Fasnu×
             {A = Selbau p₂ b}
             {B = Sm}
