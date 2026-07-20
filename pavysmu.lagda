@@ -153,6 +153,68 @@ open import Relation.Binary.PropositionalEquality
   )
 \end{code}
 
+\section{le temci co'e / Time Stuff}
+
+\subsection{le fasnu se ctaipe / The Event Type}
+\subsubsection{la .lojban.}
+ni'o la'oi .\F{Fasnu}.\ se ctaipe lo sinxa be lo co'e fasnu\sds  .i tolsnuti fa le su'u smuvrici\sds  .i la .varik. cu jinvi le du'u la'oi .\F{Fasnu}.\ na jai steci le ro'onje munje
+
+.i pe'a cai ji'a ga jo ctaipe la'e zoi zoi.\ \F{FasnuI} \B f \B x .zoi. gi la'e zo'oi .\B f.\ nu ctaipe la'e zo'oi .\B x.
+
+\paragraph{English}
+\F{Fasnu} is the type of representations of events or whatever.  Being vague is intentional.  VARIK opines that \F{Fasnu} is not specific/restricted to the physical universe.
+
+``A term of \F{FasnuI} \B f \B x exists iff \B f is an event of that a term of \B x exists'' is a metaphor.
+
+\begin{code}
+Fasnu : Set
+Fasnu = {!!}
+
+FasnuI : ∀ {a} → Fasnu → Set a → Set
+FasnuI = {!!}
+\end{code}
+
+\subsection{le lidne se ctaipe / The Types regarding Preceding}
+\paragraph{la .lojban.}
+ni'o ga jo ctaipe la'e zoi zoi.\ \F{Lidne} \B x \B z .zoi.\ gi la'e zo'oi .\B x.\ lidne la'e zo'oi .\B z.
+
+\paragraph{English}
+A term of \F{Lidne} \B x \B z exists iff \B x precedes \B z.
+
+\begin{code}
+Lidne : Fasnu → Fasnu → Set
+Lidne = {!!}
+\end{code}
+
+\subsection{le jai filri'a be zo'e je tu'a lo fancu / Things which Facilitate that (Functions are Used) and Whatnot}
+\paragraph{la .lojban.}
+ni'o la .varik.\ cu jinvi le du'u banzuka fa le velcki be le se ctaipe fi lo nu jimpe fi le fancu
+
+\paragraph{English}
+VARIK opines that the definitions of the types are sufficient for understanding about the functions.
+
+\begin{code}
+Fasnu× : ∀ {a b} → {A : Set a} → {B : Set b}
+       → {f : Fasnu}
+       → FasnuI f A
+       → FasnuI f B
+       → FasnuI f $ A × B
+Fasnu× = {!!}
+
+Fasnu-¬ : ∀ {a} → {A : Set a}
+        → {f : Fasnu}
+        → FasnuI f A
+        → ¬ FasnuI f (¬ A)
+Fasnu-¬ = {!!}
+
+Fasnu-Imp : ∀ {a b} → {A : Set a} → {B : Set b}
+          → (A → B)
+          → (f : Fasnu)
+          → FasnuI f A
+          → FasnuI f B
+Fasnu-Imp = {!!}
+\end{code}
+
 \section{le vrici se ctaipe / Miscellaneous Types}
 
 \subsection{le se ctaipe be lo co'e ja sinxa be lo prenu / The Type of Representations/Whatever of Prenu}
@@ -261,18 +323,6 @@ ni'o lo ro co'e cu te gerna la'e zo'oi .\B b.\ jo cu ctaipe ja ke se pagbu be lo
 \begin{code}
 Tegerna : Bangu → Set
 Tegerna = {!!}
-\end{code}
-
-\subsection{le djuno rinka cusku se ctaipe / The Types Regarding Communicating New Information}
-\paragraph{la .lojban.}
-ni'o ga jo ctaipe la'e zoi zoi.\ \F{Comm} \B b \B p \B r \B g .zoi.\ gi ga je lo me'oi .\B p.\ prenu cu cusku la'e zo'oi .\B g.\ lo me'oi .\B r.\ prenu se ri'a lo nu lo me'oi .\B g.\ prenu cu jimpe fi le smuni be la'e zo'oi .\B g.\ bei lo me'oi .\B p.\ prenu
-
-\paragraph{English}
-If-and-only-if a term of \F{Comm} \B p \B r \B g exists, then the \B p prenu communicates/says/writes (to the \B r prenu) \B g, and the \B r prenu receives the information, and the result is that the \B r prenu understands about the meaning (to the \B p prenu) of \B g.
-
-\begin{code}
-Comm : (b : Bangu) → (p₁ p₂ : Prenu) → (g : Tegerna b) → Set
-Comm = {!!}
 \end{code}
 
 \subsection{le su'u smuni kei se ctaipe be lo te gerna / The Types regarding Being Meaningful}
@@ -394,49 +444,28 @@ Jimpe→Slabu : ∀ {a} → {A : Set a}
 Jimpe→Slabu = {!!}
 \end{code}
 
-\subsection{le ctaipe be lo su'u djuno gasnu cusku naja cu cusku lo na se slabu / The Proof of that (Communicating Implies Stating a Thing which is Unfamiliar)}
+\subsection{le djuno rinka cusku se ctaipe / The Types Regarding Communicating New Information}
 \paragraph{la .lojban.}
-ni'o sa'u ko'a goi la'o zoi.\ \F{Comm→¬Slabu}\ .zoi.\ ctaipe le su'u ro da poi ke'a prenu zo'u ro de poi ke'a prenu zo'u ro di zo'u ga naja da me'oi .communicate... cei ke gasnu be lo nu de djuno di gi di na slabu de\sds  .i ku'i la .varik.\ na birti lo du'u vo'a cinmo ma kau tu'a ko'a\\
-.i la .varik.\ cu kajde fi zo'e joi le su'u la'o zoi.\ \F{Comm→¬Slabu}\ .zoi. jai tolmapti tu'a la'o zoi.\ \F{Jimpe→Slabu}\ .zoi. ri'a zo'e joi le su'u vo'a na pilno lo temci logji
+ni'o ga jo ctaipe la'e zoi zoi.\ \F{Comm} \B b \B p \B r \B g .zoi.\ gi ga je lo me'oi .\B p.\ prenu cu cusku la'e zo'oi .\B g.\ lo me'oi .\B r.\ prenu se ri'a lo nu lo me'oi .\B g.\ prenu cu jimpe fi le smuni be la'e zo'oi .\B g.\ bei lo me'oi .\B p.\ prenu\sds  .i la .varik.\ cu jinvi le du'u le me'oi .field.\ cu co'e ja jai frili lo prenu je ke jimpe be fi lo se ctaipe fancu
 
 \paragraph{English}
-Basically, \F{Comm→¬Slabu} is a proof of that (for all prenu $p$, for all prenu $r$, for all things $x$, if a thing which happens is that ($p$ communicates (to $r$) $x$) (which is that $p$ causes that $r$ knows $x$), then $x$ is not familiar to $r$).  But VARIK is not certain about the feelings (of VARIK) regarding \F{Comm→Slabu}.\\
-VARIK cautions.  \F{Jimpe→Slabu} is incompatible with some \F{Jimpe→Slabu} things.  The reason is relevant to not using temporal logic.
+If-and-only-if a term of \F{Comm} \B p \B r \B g exists, then the \B p prenu communicates/says/writes (to the \B r prenu) \B g, and the \B r prenu receives the information, and the result is that the \B r prenu understands about the meaning (to the \B p prenu) of \B g.  VARIK opines that understanding about the fields is easy/whatever for prenu which are familiar with the type functions.
 
 \begin{code}
-Comm→¬Slabu : (b : Bangu)
-            → (p₁ p₂ : Prenu)
-            → (g : Tegerna b)
-            → Comm b p₁ p₂ g
-            → (Σ
-                Smuni
-                (λ s → IsSmuni b s g p₁ (banguSmuvanbi b)
-                     × ¬ Slabu s p₂))
-Comm→¬Slabu = {!!}
-\end{code}
-
-\subsubsection{le versiio pe'a pe lo pavysmu bangu / The ``Version'' for Semantically Unambiguous/Precise Languages}
-
-\begin{code}
-PbComm→¬Slabu : (b : Bangu)
-              → (Pb : PavysmuBangu b)
-              → (p₁ p₂ : Prenu)
-              → Selbau p₁ b
-              → Selbau p₂ b
-              → (g : Tegerna b)
-              → Comm b p₁ p₂ g
-              → (let s = Σ.proj₁ $ Pb g in
-                 (_×_
-                   (IsSmuni b s g p₁ $ banguSmuvanbi b)
-                   (¬ Slabu s p₂)))
-PbComm→¬Slabu b Pb p₁ p₂ S₁ S₂ g x = ≡.subst F d $ Σ.proj₂ ¬S
-  where
-  ¬S = Comm→¬Slabu b p₁ p₂ g x
-  F = λ s → IsSmuni b s g p₁ (banguSmuvanbi b) × ¬ (Slabu s p₂)
-  d : Σ.proj₁ ¬S ≡ Σ.proj₁ (Pb g)
-  d = ≡.sym $ Pavysmu.nis Ps (Σ.proj₁ ¬S) $ Σ.proj₁ $ Σ.proj₂ ¬S
-    where
-    Ps = Σ.proj₂ (Pb g) p₁ S₁
+record Comm (b : Bangu) (p₁ p₂ : Prenu) (g : Tegerna b) : Set where
+  VRICI_PLACEHOLDER_BULLSHIT_THING : Set
+  VRICI_PLACEHOLDER_BULLSHIT_THING = {!!}
+  field
+    f₀ f₁ : Fasnu
+    smuni : Smuni
+    lidne : Lidne f₀ f₁
+    f₀-selbau : FasnuI f₀ $ Selbau p₁ b
+    f₀-selbau₂ : FasnuI f₀ $ Selbau p₂ b
+    f₁-selbau : FasnuI f₁ $ Selbau p₂ b
+    f₀-¬slabu : FasnuI f₀ $ ¬ Slabu smuni p₂
+    f₀-isSmuni : FasnuI f₀ $ IsSmuni b smuni g p₁ $ banguSmuvanbi b
+    f₁-isSmuni : FasnuI f₁ $ IsSmuni b smuni g p₂ $ banguSmuvanbi b
+    vrc : VRICI_PLACEHOLDER_BULLSHIT_THING
 \end{code}
 
 \section{tu'a le se kucli be la .varik. / The Subject of the Curiosity of VARIK}
@@ -481,30 +510,54 @@ pretiPe'a' : (b : Bangu)
            → PavysmuBangu b
            → (g : Tegerna b)
            → (p₁ p₂ : Prenu)
-           → Selbau p₁ b
-           → Selbau p₂ b
            → ¬ Comm b p₁ p₂ g
-pretiPe'a' b Pb g p₁ p₂ S₁ S₂ C = Σ.proj₂ ¬S S
+pretiPe'a' b Pb g p₁ p₂ C = Fasnu-¬ {A = SLB} {f} S ¬S
   where
-  ¬S = PbComm→¬Slabu b Pb p₁ p₂ S₁ S₂ g C
-  S : Slabu (Σ.proj₁ $ Pb g) p₂
-  S = (Jimpe→Slabu
-        {x = Σ.proj₁ $ Pb g}
-        {p₂}
-        (*Jimpe→Jimpe
-          p₂
-          b
-          (Σ.proj₁ $ Pb g)
-          g
-          IsS
-          (Smuni→Jimpe
-            b
-            (Σ.proj₁ $ Pb g)
-            g
-            p₂
-            IsS)))
+  s = Comm.smuni C
+  SLB = Slabu s p₂
+  f = Comm.f₀ C
+  ¬S : FasnuI f $ ¬ SLB
+  ¬S = Comm.f₀-¬slabu C
+  bs = banguSmuvanbi b
+  S : FasnuI f SLB
+  S = (Fasnu-Imp
+        {A = Selbau p₁ b × Selbau p₂ b × IsSmuni b s g p₁ bs}
+        {B = Slabu s p₂}
+        (λ (sb₁ , sb , isS)
+          → (Jimpe→Slabu
+              {x = s}
+              {p₂}
+              (Smuni→Jimpe*
+                p₂
+                b
+                s
+                g
+                (≡.subst
+                  (λ s → IsSmuni b s g p₂ bs)
+                  (Pavysmu.nis
+                    (Σ.proj₂ (Pb g) p₁ sb₁)
+                    (Comm.smuni C)
+                    isS)
+                  (Pavysmu.is $ Σ.proj₂ (Pb g) p₂ sb)))))
+        f
+        (Fasnu×
+          {A = Selbau p₁ b}
+          {B = Selbau p₂ b × IsSmuni b s g p₁ bs}
+          {f = f}
+          (C .Comm.f₀-selbau)
+          (Fasnu×
+            {A = Selbau p₂ b}
+            {B = IsSmuni b s g p₁ bs}
+            {f = f}
+            (Comm.f₀-selbau₂ C)
+            (Comm.f₀-isSmuni C))))
     where
-    IsS : IsSmuni b (Σ.proj₁ $ (Pb g)) g p₂ $ banguSmuvanbi b
-    IsS = Pavysmu.is $ Σ.proj₂ (Pb g) p₂ S₂
+    Smuni→Jimpe* : (p : Prenu)
+                 → (b : Bangu)
+                 → (sm : Smuni)
+                 → (g : Tegerna b)
+                 → IsSmuni b sm g p $ banguSmuvanbi b
+                 → Setesejimpe p sm
+    Smuni→Jimpe* p b sm g x = *Jimpe→Jimpe p b sm g x $ Smuni→Jimpe b sm g p x
 \end{code}
 \end{document}
