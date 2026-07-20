@@ -536,7 +536,7 @@ pretiPe'a' b Pb g p₁ p₂ C = Fasnu-¬ {A = SLB} {f} S ¬S
                   (λ s → IsSmuni b s g p₂ bs)
                   (Pavysmu.nis
                     (Σ.proj₂ (Pb g) p₁ sb₁)
-                    (Comm.smuni C)
+                    s
                     isS)
                   (Pavysmu.is $ Σ.proj₂ (Pb g) p₂ sb)))))
         f
