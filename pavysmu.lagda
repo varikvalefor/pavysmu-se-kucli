@@ -461,9 +461,9 @@ record Comm (b : Bangu) (p₁ p₂ : Prenu) (g : Tegerna b) : Set where
     lidne : Lidne f₀ f₁
     f₀-selbau : FasnuI f₀ $ Selbau p₁ b
     f₀-selbau₂ : FasnuI f₀ $ Selbau p₂ b
-    f₁-selbau : FasnuI f₁ $ Selbau p₂ b
     f₀-¬slabu : FasnuI f₀ $ ¬ Slabu smuni p₂
     f₀-isSmuni : FasnuI f₀ $ IsSmuni b smuni g p₁ $ banguSmuvanbi b
+    f₁-selbau : FasnuI f₁ $ Selbau p₂ b
     f₁-isSmuni : FasnuI f₁ $ IsSmuni b smuni g p₂ $ banguSmuvanbi b
     vrc : VRICI_PLACEHOLDER_BULLSHIT_THING
 \end{code}
