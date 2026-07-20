@@ -468,7 +468,7 @@ record Comm (b : Bangu) (p₁ p₂ : Prenu) (g : Tegerna b) : Set where
     vrc : VRICI_PLACEHOLDER_BULLSHIT_THING
 \end{code}
 
-\section{tu'a le se kucli be la .varik. / The Subject of the Curiosity of VARIK}
+\section{tu'a ctaipe be le su'u slabu lo ro te gerna be lo smuvrici bangu / The Proof of Being Familiar with All Utterances of a Semantically Unambiguous Language}
 \paragraph{la .lojban.}
 ni'o sa'u la'oi .\F{pretiPe'a}.\ ctaipe le su'u ro da poi ke'a pavysmu bangu zo'u ro de poi ke'a prenu je cu selbau da zo'u ro di poi ke'a te gerna da zo'u pavysmu lo se slabu je te se jimpe be de di va'o tu'a da\ldots kei fo tu'a le se sruma noi ku'i la .varik.\ na birti tu'a ke'a
 
@@ -554,5 +554,47 @@ pretiPe'a' b Pb g p₁ p₂ C = Fasnu-¬ {A = SLB} {f} S ¬S
     Smuni→Jimpe* x = *Jimpe→Jimpe p₂ b s g x SJ
       where
       SJ = Smuni→Jimpe b s g p₂ x
+\end{code}
+
+\section{le ctaipe be le su'u ga naja cnino cusku zo'e naje lo smuvrici / The Proof of that (If Communication Occurs, then the Utterance is Semantically Ambiguous/Vague)}
+\paragraph{la .lojban.}
+ni'o sa'u la'o zoi.\ \F{C→¬P}\ .zoi. ctaipe le su'u lo ro prenu cu cusku fi lo ro prenu ku fe lo jai cnino be ri se pi'o lo no smuvrici je te gerna... kei fi le se sruma pe'a noi la .varik.\ na birti tu'a ke'a\sds  .i kajde fa la .varik.
+
+\paragraph{English}
+Basically, \F{C→¬P} proves that (that all processes of linguistically communicating new information are processes of using utterances which are semantically ambiguous/vague)\ldots under assumptions \(s\) such that VARIK is not certain about \(s\).  VARIK cautions.
+
+C→¬P : (b : Bangu)
+     → (g : Tegerna b)
+     → (p₁ p₂ : Prenu)
+     → (C : Comm b p₁ p₂ g)
+     → ¬_ $ FasnuI (Comm.f₀ C) $ Pavysmu b g (Comm.smuni C) p₂
+C→¬P b g p₁ p₂ C ps = Fasnu-¬ {A = Slabu s p₂} {f} S ¬S
+  where
+  s = Comm.smuni C
+  f = Comm.f₀ C
+  S : FasnuI f $ Slabu s p₂
+  S = (Fasnu-Imp
+        {A = Pavysmu b g s p₂}
+        {B = Slabu s p₂}
+        (λ ps' →
+          (Jimpe→Slabu
+            {x = s}
+            {p = p₂}
+            (*Jimpe→Jimpe
+              p₂
+              b
+              s
+              g
+              (Pavysmu.is ps')
+              (Smuni→Jimpe
+                b
+                s
+                g
+                p₂
+                (Pavysmu.is ps')))))
+        f
+        ps)
+  ¬S : FasnuI f $ ¬ Slabu s p₂
+  ¬S = Comm.f₀-¬slabu C
 \end{code}
 \end{document}
