@@ -558,6 +558,8 @@ pretiPe'a' b Pb g p₁ p₂ C = Fasnu-¬ {A = SLB} {f} S ¬S
                  → (g : Tegerna b)
                  → IsSmuni b sm g p $ banguSmuvanbi b
                  → Setesejimpe p sm
-    Smuni→Jimpe* p b sm g x = *Jimpe→Jimpe p b sm g x $ Smuni→Jimpe b sm g p x
+    Smuni→Jimpe* p b sm g x = *Jimpe→Jimpe p b sm g x SJ
+      where
+      SJ = Smuni→Jimpe b sm g p x
 \end{code}
 \end{document}
