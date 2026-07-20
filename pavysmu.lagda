@@ -573,6 +573,8 @@ C→¬P b g p₁ p₂ C ps = Fasnu-¬ {A = Slabu s p₂} {f} S ¬S
   where
   s = Comm.smuni C
   f = Comm.f₀ C
+  ¬S : FasnuI f $ ¬ Slabu s p₂
+  ¬S = Comm.f₀-¬slabu C
   S : FasnuI f $ Slabu s p₂
   S = (Fasnu-Imp
         {A = Pavysmu b g s p₂}
@@ -595,7 +597,5 @@ C→¬P b g p₁ p₂ C ps = Fasnu-¬ {A = Slabu s p₂} {f} S ¬S
                 (Pavysmu.is ps')))))
         f
         ps)
-  ¬S : FasnuI f $ ¬ Slabu s p₂
-  ¬S = Comm.f₀-¬slabu C
 \end{code}
 \end{document}
