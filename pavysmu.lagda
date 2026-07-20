@@ -502,6 +502,7 @@ pretiPe'a' b Pb g p₁ p₂ S₁ S₂ C = Σ.proj₂ ¬S S
             p₂
             (IsS))))
     where
+    IsS : IsSmuni b (Σ.proj₁ $ (Pb g)) g p₂ $ banguSmuvanbi b
     IsS = Pavysmu.is $ Σ.proj₂ (Pb g) p₂ S₂
 \end{code}
 \end{document}
