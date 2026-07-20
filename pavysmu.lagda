@@ -523,7 +523,7 @@ pretiPe'a' b Pb g p₁ p₂ C = Fasnu-¬ {A = SLB} {f} S ¬S
   S = (let Sm = IsSmuni b s g p₁ bs in
        Fasnu-Imp
         {A = Selbau p₁ b × Selbau p₂ b × Sm}
-        {B = Slabu s p₂}
+        {B = SLB}
         (λ (sb₁ , sb , isS)
           → (Jimpe→Slabu
               {x = s}
