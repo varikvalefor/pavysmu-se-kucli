@@ -563,7 +563,7 @@ pretiPe'a' b Pb g p₁ p₂ C = Fasnu-¬ {A = SLB} {f} S ¬S
 ni'o sa'u la'o zoi.\ \F{C→¬P}\ .zoi. ctaipe le su'u lo ro prenu cu cusku fi lo ro prenu ku fe lo jai cnino be ri se pi'o lo no smuvrici je te gerna\ldots kei fi le se sruma pe'a noi la .varik.\ na birti tu'a ke'a\sds  .i kajde fa la .varik.
 
 \paragraph{English}
-Basically, \F{C→¬P} proves that (that all processes of linguistically communicating new information are processes of using utterances which are semantically ambiguous/vague)\ldots under assumptions \(s\) such that VARIK is not certain about \(s\).  VARIK cautions.
+Basically, \F{C→¬P} proves (under assumptions $s$) that (that all processes of linguistically communicating new information are processes of using utterances which are semantically ambiguous/vague)\ldots such that VARIK is not certain about \(s\).  VARIK cautions.
 
 \begin{code}
 C→¬P : (b : Bangu)
