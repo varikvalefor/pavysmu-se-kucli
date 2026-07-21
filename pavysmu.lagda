@@ -558,7 +558,7 @@ pretiPe'a' b Pb g p₁ p₂ C = Fasnu-¬ {A = SLB} {f} S ¬S
 
 \newpage
 
-\section{le ctaipe be le su'u ga naja cnino cusku zo'e naje lo smuvrici / The Proof of that (If Communication Occurs, then the Utterance is Semantically Ambiguous/Vague)}
+\section{le ctaipe be le su'u bangu ke cnino cusku zo'e naje lo smuvrici / The Proof of that (If Linguistic Communication Occurs, then the Utterance is Semantically Ambiguous/Vague)}
 \paragraph{la .lojban.}
 ni'o sa'u la'o zoi.\ \F{C→¬P}\ .zoi. ctaipe le su'u lo ro prenu cu cusku fi lo ro prenu ku fe lo jai cnino be ri se pi'o lo no smuvrici je te gerna\ldots kei fi le se sruma pe'a noi la .varik.\ na birti tu'a ke'a\sds  .i kajde fa la .varik.
 
